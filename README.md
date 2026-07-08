@@ -1,13 +1,66 @@
-# Shell Extension Agent
+# Shell Extension для Windows
 
-Windows Shell Extension with context-dependent menu options for different file extensions.
+# 
 
-## Features
-- Context menu submenu "Additional Actions"
-- File extension-based actions
-- Easy to add new extensions and actions
+# Расширение контекстного меню Проводника с возможностью добавлять действия для разных типов файлов.
 
-## Technologies
-- C# / .NET Framework
-- SharpShell
-- Windows Shell Extension API
+# 
+
+# Что умеет
+
+# 
+
+# Добавляет подменю "Дополнительные действия" в контекстное меню.
+
+# Действия зависят от расширения файла.
+
+# Легко добавлять новые опции — правишь словарь в одном месте.
+
+# 
+
+# \#Пример
+
+# 
+
+# Для `.pattern`:
+
+# Импортировать в...
+
+# Экспортировать как...
+
+# Проверить валидность
+
+# 
+
+# Для `.txt`:
+
+# Открыть в Блокноте
+
+# Показать статистику
+
+# 
+
+# &#x20;Как добавить своё действие
+
+# 
+
+# Открой `PatternContextMenu.cs`, найди `ActionMap` и добавь строку:
+
+# 
+
+# ```csharp
+
+# { ".pdf", new List<FileAction>()
+
+# &#x20;   {
+
+# &#x20;       new FileAction("Название пункта", (path) => {
+
+# &#x20;           // твой код
+
+# &#x20;       })
+
+# &#x20;   }
+
+# }
+
